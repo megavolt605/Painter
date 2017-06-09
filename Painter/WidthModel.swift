@@ -9,5 +9,5 @@
 import CoreGraphics
 
 struct WidthModel {
-    var width: CGFloat
+    var widthValue: CGFloat
 }

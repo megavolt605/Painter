@@ -19,14 +19,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var painterImageView: UIImageView!
     @IBOutlet weak var canvasImageView: UIImageView!
     
+    @IBOutlet weak var topView: UIView!
     @IBOutlet weak var colorView: ColorView!
     @IBOutlet weak var widthView: WidthView!
-    @IBOutlet weak var topView: UIView!
     
     var drawingModel = DrawingModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         colorView.isHidden = true
         widthView.isHidden = true
         
@@ -38,6 +39,7 @@ class ViewController: UIViewController {
         topView.layer.shadowOpacity = 0.5
         
         drawingModel.delegate = self
+        widthView.delegate = self
     }
 
     override func viewDidLayoutSubviews() {
@@ -101,7 +103,7 @@ class ViewController: UIViewController {
                 completion: { _ in self.widthView.isHidden = true }
             )
         }
-        //widthView.updateValues()
+        widthView.updateValues()
     }
     
     @IBAction func undoButtonAction(_ sender: Any) {
@@ -129,4 +131,13 @@ extension ViewController: DrawingModelDelegate {
         canvasImageView.image = drawingModel.canvasImage
     }
     
+}
+
+extension ViewController: WidthViewDelegate {
+    func widthValueChanged(to newValue: Float) {
+        drawingModel.canvas.width.widthValue = CGFloat(newValue)
+    }
+    func getCurrentWidth() -> Float {
+        return Float(drawingModel.canvas.width.widthValue)
+    }
 }

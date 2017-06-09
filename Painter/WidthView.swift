@@ -10,6 +10,7 @@ import UIKit
 
 protocol WidthViewDelegate: class {
     func widthValueChanged(to newValue: Float)
+    func getCurrentWidth() -> Float
 }
 
 class WidthView: UIView {
@@ -34,11 +35,13 @@ class WidthView: UIView {
     }
     
     func updateValues() {
-        widthLabel.text = String(Int(widthSlider.value))
-        delegate?.widthValueChanged(to: widthSlider.value)
+        guard let value = delegate?.getCurrentWidth() else { return }
+        widthLabel.text = String(Int(value))
+        widthSlider.value = value
     }
     
     @IBAction func widthSliderValueChanged(_ sender: Any) {
+        delegate?.widthValueChanged(to: widthSlider.value)
         updateValues()
     }
 }

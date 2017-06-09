@@ -20,7 +20,7 @@ struct CanvasModel {
     
     init() {
         color = ColorModel(color: .black)
-        width = WidthModel(width: 5.0)
+        width = WidthModel(widthValue: 5.0)
     }
     
     mutating func addLine(from fromPoint: CGPoint, to toPoint: CGPoint) {
@@ -28,7 +28,7 @@ struct CanvasModel {
         let context = UIGraphicsGetCurrentContext()
         
         context?.setLineCap(.round)
-        context?.setLineWidth(10.0)
+        context?.setLineWidth(width.widthValue)
         context?.setStrokeColor(UIColor.black.cgColor)
         
         context?.move(to: fromPoint)
