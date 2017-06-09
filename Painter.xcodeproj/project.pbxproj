@@ -12,6 +12,13 @@
 		78A0D3F51EEABB1800790C26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78A0D3F31EEABB1800790C26 /* Main.storyboard */; };
 		78A0D3F71EEABB1800790C26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78A0D3F61EEABB1800790C26 /* Assets.xcassets */; };
 		78A0D3FA1EEABB1800790C26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78A0D3F81EEABB1800790C26 /* LaunchScreen.storyboard */; };
+		78A0D40D1EEAC94300790C26 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A0D40C1EEAC94300790C26 /* ColorView.swift */; };
+		78A0D40F1EEAC95D00790C26 /* WidthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A0D40E1EEAC95D00790C26 /* WidthView.swift */; };
+		78A0D4151EEAD1D000790C26 /* DrawingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A0D4141EEAD1D000790C26 /* DrawingModel.swift */; };
+		78A0D4171EEAD3C900790C26 /* CanvasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A0D4161EEAD3C900790C26 /* CanvasModel.swift */; };
+		78A0D4191EEAD3CE00790C26 /* LineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A0D4181EEAD3CE00790C26 /* LineModel.swift */; };
+		78A0D41B1EEAD3D600790C26 /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A0D41A1EEAD3D600790C26 /* ColorModel.swift */; };
+		78A0D41D1EEAD3DB00790C26 /* WidthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A0D41C1EEAD3DB00790C26 /* WidthModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		78A0D3F61EEABB1800790C26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78A0D3F91EEABB1800790C26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78A0D3FB1EEABB1800790C26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78A0D40C1EEAC94300790C26 /* ColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
+		78A0D40E1EEAC95D00790C26 /* WidthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidthView.swift; sourceTree = "<group>"; };
+		78A0D4141EEAD1D000790C26 /* DrawingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingModel.swift; sourceTree = "<group>"; };
+		78A0D4161EEAD3C900790C26 /* CanvasModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasModel.swift; sourceTree = "<group>"; };
+		78A0D4181EEAD3CE00790C26 /* LineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineModel.swift; sourceTree = "<group>"; };
+		78A0D41A1EEAD3D600790C26 /* ColorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
+		78A0D41C1EEAD3DB00790C26 /* WidthModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidthModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,61 @@
 		78A0D3EE1EEABB1800790C26 /* Painter */ = {
 			isa = PBXGroup;
 			children = (
-				78A0D3EF1EEABB1800790C26 /* AppDelegate.swift */,
-				78A0D3F11EEABB1800790C26 /* ViewController.swift */,
+				78A0D4101EEAD18900790C26 /* Classes */,
+				78A0D4031EEABBFF00790C26 /* Resources */,
+				78A0D4111EEAD1A100790C26 /* Supporting Files */,
+			);
+			path = Painter;
+			sourceTree = "<group>";
+		};
+		78A0D4031EEABBFF00790C26 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				78A0D3F31EEABB1800790C26 /* Main.storyboard */,
 				78A0D3F61EEABB1800790C26 /* Assets.xcassets */,
 				78A0D3F81EEABB1800790C26 /* LaunchScreen.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		78A0D4101EEAD18900790C26 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				78A0D4131EEAD1BE00790C26 /* Model */,
+				78A0D4121EEAD1B500790C26 /* User Interface */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		78A0D4111EEAD1A100790C26 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				78A0D3EF1EEABB1800790C26 /* AppDelegate.swift */,
 				78A0D3FB1EEABB1800790C26 /* Info.plist */,
 			);
-			path = Painter;
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		78A0D4121EEAD1B500790C26 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				78A0D3F11EEABB1800790C26 /* ViewController.swift */,
+				78A0D40C1EEAC94300790C26 /* ColorView.swift */,
+				78A0D40E1EEAC95D00790C26 /* WidthView.swift */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		78A0D4131EEAD1BE00790C26 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				78A0D4141EEAD1D000790C26 /* DrawingModel.swift */,
+				78A0D4161EEAD3C900790C26 /* CanvasModel.swift */,
+				78A0D4181EEAD3CE00790C26 /* LineModel.swift */,
+				78A0D41A1EEAD3D600790C26 /* ColorModel.swift */,
+				78A0D41C1EEAD3DB00790C26 /* WidthModel.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +198,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78A0D4191EEAD3CE00790C26 /* LineModel.swift in Sources */,
+				78A0D41D1EEAD3DB00790C26 /* WidthModel.swift in Sources */,
+				78A0D40D1EEAC94300790C26 /* ColorView.swift in Sources */,
+				78A0D40F1EEAC95D00790C26 /* WidthView.swift in Sources */,
+				78A0D41B1EEAD3D600790C26 /* ColorModel.swift in Sources */,
+				78A0D4151EEAD1D000790C26 /* DrawingModel.swift in Sources */,
 				78A0D3F21EEABB1800790C26 /* ViewController.swift in Sources */,
 				78A0D3F01EEABB1800790C26 /* AppDelegate.swift in Sources */,
+				78A0D4171EEAD3C900790C26 /* CanvasModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +337,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.complexnumbers.Painter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -282,6 +351,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.complexnumbers.Painter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
