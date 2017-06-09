@@ -10,6 +10,7 @@ import UIKit
 
 enum ColorModelValues {
     case black, red, orange, yellow, green, blue, purple//, white
+   
     var cgColor: CGColor {
         let color: UIColor
         switch self {

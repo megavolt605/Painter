@@ -27,6 +27,7 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q0w-9A-rH5">
                                 <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Dl-hw-fmJ">
                                 <rect key="frame" x="0.0" y="20" width="1112" height="96"/>
@@ -172,6 +173,10 @@
         <scene sceneID="75Z-Yx-MD5">
             <objects>
                 <viewController id="fad-wL-hvt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J5J-kq-ppM"/>
+                        <viewControllerLayoutGuide type="bottom" id="kQZ-U3-wL1"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uzC-kP-QVb" customClass="ColorView" customModule="Painter" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="64" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,6 +240,10 @@
         <scene sceneID="lWx-ij-D4u">
             <objects>
                 <viewController id="sDe-Qy-DYK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sDL-TC-zTU"/>
+                        <viewControllerLayoutGuide type="bottom" id="COo-ct-YB6"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lKf-kn-oan" customClass="WidthView" customModule="Painter" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="355" height="56"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

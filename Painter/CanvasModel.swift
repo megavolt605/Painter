@@ -12,7 +12,7 @@ struct CanvasModel {
     var lines: [LineModel] = []
     var color: ColorModel
     var width: WidthModel
-    var path = UIBezierPath()
+    //var path = UIBezierPath()
     
     mutating func clear() {
         lines = []
@@ -21,6 +21,24 @@ struct CanvasModel {
     init() {
         color = ColorModel(color: .black)
         width = WidthModel(width: 5.0)
+    }
+    
+    mutating func addLine(from fromPoint: CGPoint, to toPoint: CGPoint) {
+
+        let context = UIGraphicsGetCurrentContext()
+        
+        context?.setLineCap(.round)
+        context?.setLineWidth(10.0)
+        context?.setStrokeColor(UIColor.black.cgColor)
+        
+        context?.move(to: fromPoint)
+        context?.addLine(to: toPoint)
+        
+        context?.strokePath()
+
+        let line = LineModel(fromPoint: fromPoint, toPoint: toPoint)
+        line.draw(inContext: context)
+        lines.append(line)
     }
     
 //    func draw(inContext context: CGContext, path: UIBezierPath) {

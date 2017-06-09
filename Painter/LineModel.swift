@@ -12,9 +12,9 @@ struct LineModel {
     var fromPoint: CGPoint
     var toPoint: CGPoint
     
-//    func draw(inContext context: CGContext, path: UIBezierPath) {
-//        path.move(to: fromPoint)
-//        path.addLine(to: toPoint)
-//    }
+    func draw(inContext context: CGContext?) {
+        context?.move(to: fromPoint)
+        context?.addLine(to: toPoint)
+    }
     
 }
